@@ -1,0 +1,85 @@
+/* nav styles start */
+.nav-div {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 15px 50px;
+}
+.nav-content h1 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+.nav-list {
+  display: flex;
+}
+
+.nav-list ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.nav-list a {
+  text-decoration: none;
+  color: black;
+}
+.nav-list li {
+  margin: 0 18px;
+}
+.nav-btn {
+  margin-left: 18px;
+  padding: 10px 18px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  background: linear-gradient(to bottom right, #632ee3, #9f62f2);
+}
+/* nav styles end */
+
+/* banner styles start */
+.full-banner {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 50px;
+}
+.banner-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/vector1.png);
+  border-radius: 8px;
+  width: 620px;
+  height: 180px;
+  background: linear-gradient(to right, #632ee3, #9f62f2);
+  color: white;
+}
+
+.banner-r {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-image: url(./assets/vector2.png);
+  width: 620px;
+  height: 180px;
+  background: linear-gradient(to right, #54cf68, #00827a);
+  color: white;
+}
+span {
+  font-size: 35px;
+  font-weight: bolder;
+  padding-top: 15px;
+}
+
+.full-banner p {
+  font-size: 18px;
+}
+/* banner styles end */
