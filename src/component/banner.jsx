@@ -1,3 +1,4 @@
+import "../App.css";
 function Banner() {
   return (
     <div className="full-banner">
