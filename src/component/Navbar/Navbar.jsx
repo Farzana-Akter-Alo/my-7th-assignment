@@ -2,8 +2,8 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="border-b-2  border-b-gray-100">
-      <div className="navbar mx-auto max-w-7xl ">
+    <div className="border-b-2 bg-white border-b-gray-100">
+      <div className="navbar  mx-auto max-w-7xl ">
         <div className="navbar-start">
           <h1 className="text-2xl font-bold">CS — Ticket System</h1>
         </div>
