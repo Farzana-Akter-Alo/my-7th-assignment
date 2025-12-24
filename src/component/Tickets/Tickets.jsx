@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
 import TicketsCard from "./TicketsCard";
 import TicketsCardDetails from "./TicketsCardDetails";
+import { toast } from "react-toastify";
 
 const Tickets = ({ ticketsPromise, setCount }) => {
   const tickets = use(ticketsPromise);
@@ -9,13 +10,24 @@ const Tickets = ({ ticketsPromise, setCount }) => {
   const [taskStatus, setTaskStatus] = useState([]);
   const [resolvedTickets, setResolvedTickets] = useState([]);
   const handleCardClick = (ticket) => {
+    const exists = taskStatus.find((t) => t.id === ticket.id);
+    if (exists) {
+      toast.warning("This ticket is already in progress!", {
+        toastId: `in-progress-${ticket.id}`,
+      });
+      return;
+    }
+
+    setTaskStatus([...taskStatus, ticket]);
+
     setCount((prev) => ({
       ...prev,
       inProgress: prev.inProgress + 1,
     }));
-    setTaskStatus([...taskStatus, ticket]);
-    const exists = taskStatus.find((t) => t.id === ticket.id);
-    if (exists) return;
+
+    toast.success("Ticket added to In-Progress", {
+      toastId: `added-${ticket.id}`,
+    });
   };
 
   const handleComplete = (ticket) => {
