@@ -1,14 +1,20 @@
-import React, { use, useState } from "react";
+import React, { use, useState, useEffect } from "react";
 import TicketsCard from "./TicketsCard";
 import TicketsCardDetails from "./TicketsCardDetails";
 import { toast } from "react-toastify";
 
 const Tickets = ({ ticketsPromise, setCount }) => {
-  const tickets = use(ticketsPromise);
-
   // card right side's states
   const [taskStatus, setTaskStatus] = useState([]);
   const [resolvedTickets, setResolvedTickets] = useState([]);
+  // for remove card state
+  const [tickets, setTickets] = useState([]);
+
+  // for remove card
+  useEffect(() => {
+    ticketsPromise.then((data) => setTickets(data));
+  }, [ticketsPromise]);
+
   const handleCardClick = (ticket) => {
     const exists = taskStatus.find((t) => t.id === ticket.id);
     if (exists) {
@@ -40,6 +46,13 @@ const Tickets = ({ ticketsPromise, setCount }) => {
       inProgress: newTaskStatus.length,
       resolved: newResolvedTickets.length,
     });
+
+    toast.success(`Ticket "${ticket.title}" marked as Resolved!`, {
+      toastId: `resolved-${ticket.id}`,
+    });
+
+    // Remove from left tickets cards
+    setTickets((prev) => prev.filter((t) => t.id !== ticket.id));
   };
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Banner from "./component/Banner/Banner";
 import Navbar from "./component/Navbar/Navbar";
 import Tickets from "./component/Tickets/Tickets";
@@ -25,7 +25,11 @@ function App() {
     <>
       <Navbar />
       <Banner count={count} />
-      <Tickets setCount={setCount} ticketsPromise={ticketsPromise} />
+      <Suspense
+        fallback={<span className="loading loading-spinner loading-md"></span>}
+      >
+        <Tickets setCount={setCount} ticketsPromise={ticketsPromise} />
+      </Suspense>
       <Footer />
 
       {/* Toast container */}
