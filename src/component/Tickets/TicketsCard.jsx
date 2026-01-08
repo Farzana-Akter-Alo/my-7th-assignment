@@ -12,7 +12,7 @@ const TicketsCard = ({ ticket, onTicketCardClick }) => {
         {/* card title and status */}
 
         <div className="flex items-center justify-between">
-          <h2 className="font-bold text-sm sm:text-base truncate">{title}</h2>
+          <h2 className="font-bold text-sm sm:text-base truncate text-black ">{title}</h2>
           <button
             className={`px-3 py-1 borde-0  rounded-3xl text-xs font-bold ${
               status === "Open"
