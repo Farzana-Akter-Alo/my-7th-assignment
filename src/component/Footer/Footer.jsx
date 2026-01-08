@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="bg-black text-white mt-14">
       <div className="mx-auto max-w-7xl sm:px-6 lg-px-8">
         {/* full footer */}
-        <div className=" pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-14 lg:py-14 px-4">
+        <div className="mb-4 pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-14 lg:py-14 px-4">
           {/* 1st content */}
           <div className="">
             <h3 className="text-md sm:text-lg font-bold">CS — Ticket System</h3>

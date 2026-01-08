@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="border-b-2 bg-white border-b-gray-100">
       <div className="navbar  mx-auto max-w-7xl px-8 sm:px-8 lg:px-2">
         <div className="navbar-start">
-          <h1 className="text-sm text-black sm:text-black  lg:text-2xl font-bold">
+          <h1 className="text-md text-black sm:text-black  lg:text-2xl font-bold">
             CS — Ticket System
           </h1>
         </div>
