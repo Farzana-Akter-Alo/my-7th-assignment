@@ -58,12 +58,12 @@ const Tickets = ({ ticketsPromise, setCount }) => {
   return (
     <div>
       <div className=" mx-auto max-w-7xl">
-        <h1 className="mt-14 mb-2 font-bold text-xl">Customer Tickets</h1>
+        <h1 className="px-4 mt-8 sm:mt-14 mb-2 font-bold text-xl">Customer Tickets</h1>
         {/* card full section */}
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row gap-6">
           {/* card left section */}
-          <div className="w-2/3">
-            <div className="grid grid-cols-2">
+          <div className="px-4 w-full lg:w-2/3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {tickets.map((ticket) => (
                 <TicketsCard
                   key={ticket.id}
@@ -74,7 +74,7 @@ const Tickets = ({ ticketsPromise, setCount }) => {
             </div>
           </div>
           {/* card right section */}
-          <div className="w-1/3">
+          <div className="w-full lg:w-1/3">
             <TicketsCardDetails
               onComplete={handleComplete}
               resolvedTickets={resolvedTickets}

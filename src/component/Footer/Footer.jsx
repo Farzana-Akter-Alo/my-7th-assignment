@@ -7,23 +7,23 @@ import Icon4 from "../../assets/icon.4.png";
 const Footer = () => {
   return (
     <div className="bg-black text-white mt-14">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl sm:px-6 lg-px-8">
         {/* full footer */}
-        <div className="  grid grid-cols-5 gap-14 py-14">
+        <div className=" pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-14 lg:py-14 px-4">
           {/* 1st content */}
-          <div>
-            <h3 className="text-lg font-bold">CS — Ticket System</h3>
-            <p className="text-sm text-gray-400 mt-3">
+          <div className="">
+            <h3 className="text-md sm:text-lg font-bold">CS — Ticket System</h3>
+            <p className="text-xs sm:text-sm text-gray-400 mt-3">
               CS — Ticket System is a customer support management application
               designed to organize and track tickets efficiently. Users can view
-              open tickets, move them to task status, and mark them as resolved,
-              ensuring a smooth and structured support workflow.
+              open tickets,, move them to task status, and mark them as
+              resolved, ensuring a smooth and structured support workflow.
             </p>
           </div>
           {/* 2nd content */}
           <div>
-            <h3 className="text-lg font-bold">Company</h3>
-            <ul className="text-sm text-gray-400 mt-3 space-y-3">
+            <h3 className="text:md sm:text-lg font-bold">Company</h3>
+            <ul className="text-xs sm:text-sm text-gray-400 mt-3 space-y-2 sm:space-y-3">
               <li>
                 <a href="">About Us</a>
               </li>
@@ -37,8 +37,8 @@ const Footer = () => {
           </div>
           {/* 3rd content */}
           <div>
-            <h3 className="text-lg font-bold">Services</h3>
-            <ul className="text-sm text-gray-400 mt-3 space-y-3">
+            <h3 className="text-md sm:text-lg font-bold">Services</h3>
+            <ul className="text-xs sm:text-sm text-gray-400 mt-3 space-y-2 sm:space-y-3">
               <li>
                 <a href="">Products & Services</a>
               </li>
@@ -52,8 +52,8 @@ const Footer = () => {
           </div>
           {/* 4th content */}
           <div>
-            <h3 className="text-lg font-bold">Information</h3>
-            <ul className="text-sm text-gray-400 mt-3 space-y-3">
+            <h3 className="text-md sm:text-lg font-bold">Information</h3>
+            <ul className="text-xs sm:text-sm text-gray-400 mt-3 space-y-2 sm:space-y-3">
               <li>
                 <a href="">Privacy Policy</a>
               </li>
@@ -67,8 +67,8 @@ const Footer = () => {
           </div>
           {/* 5th content */}
           <div>
-            <h3 className="text-lg font-bold">Social Links</h3>
-            <ul className="text-sm text-gray-400 mt-3 space-y-3 ">
+            <h3 className="text-md sm:text-lg font-bold">Social Links</h3>
+            <ul className="text-xs sm:text-sm text-gray-400 mt-3 space-y-3 ">
               <li>
                 <a href="" className="flex items-center gap-2">
                   {" "}
@@ -97,7 +97,7 @@ const Footer = () => {
 
         {/* copyright content */}
         <div className="text-center border-t border-t-gray-900 py-6 ">
-          <p className="text-sm">
+          <p className="text-xs sm:text-sm">
             © 2025 CS — Ticket System. All rights reserved.
           </p>
         </div>

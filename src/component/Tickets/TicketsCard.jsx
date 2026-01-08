@@ -7,12 +7,12 @@ const TicketsCard = ({ ticket, onTicketCardClick }) => {
     <div>
       <div
         onClick={() => onTicketCardClick(ticket)}
-        className="w-[392px] p-3 bg-white rounded-md mb-3"
+        className="w-full max-w-[392px] p-3 bg-white rounded-md mb-3 cursor-pointer"
       >
         {/* card title and status */}
 
         <div className="flex items-center justify-between">
-          <h2 className="font-bold">{title}</h2>
+          <h2 className="font-bold text-sm sm:text-base truncate">{title}</h2>
           <button
             className={`px-3 py-1 borde-0  rounded-3xl text-xs font-bold ${
               status === "Open"
@@ -27,10 +27,10 @@ const TicketsCard = ({ ticket, onTicketCardClick }) => {
         </div>
         {/* card description */}
         <div>
-          <p className="text-sm mt-2 text-gray-500">{description}</p>
+          <p className="text-sm mt-2 text-gray-500 line-clamp-2">{description}</p>
         </div>
-        <div className="flex items-center justify-between mt-3 ">
-          <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-3 ">
+          <div className="flex justify-between items-center gap-3">
             {/* card id & priority */}
             <span className="text-sm text-gray-500">#{id}</span>
             <p
@@ -48,7 +48,7 @@ const TicketsCard = ({ ticket, onTicketCardClick }) => {
             </p>
           </div>
           {/* card cutomer name and date */}
-          <div className="flex items-center gap-4">
+          <div className="flex justify-between items-center gap-4">
             <h3 className="text-sm  text-gray-500">{customer}</h3>
             <span className="text-xs  text-gray-500">{createdAt}</span>
           </div>
