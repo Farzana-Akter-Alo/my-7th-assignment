@@ -1,16 +1,36 @@
-# React + Vite
+# React Basics Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+এই প্রজেক্টে React-এর basic concepts নিয়ে লেখা হয়েছে।
 
-Currently, two official plugins are available:
+## Topics
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- JSX
+- State and Props
+- useState Hook
+- Event Handling
 
-## React Compiler
+## Question & Answer
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## JSX কী?
 
-## Expanding the ESLint configuration
+JSX হলো JavaScript-এর একটি syntax, যেটা দিয়ে JavaScript-এর ভেতরে HTML-এর মতো কোড লেখা যায়।
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## State এবং Props
+
+State-- হলো component-এর নিজের data, যেটা সময়ের সাথে change হতে পারে।  
+Props-- হলো parent component থেকে child component-এ পাঠানো data, যেটা modify করা যায় না।
+
+## useState Hook কী?
+
+useState হলো React-এর একটি hook, যেটা দিয়ে functional component-এ state ব্যবহার করা যায়।
+
+## Component-এর মধ্যে State শেয়ার করা
+
+React-এ সাধারণত state parent component-এ রাখা হয়।  
+তারপর props এর মাধ্যমে child component-এ পাঠানো হয়।  
+এভাবে একাধিক component একই state ব্যবহার করতে পারে।
+
+## React-এ Event Handling
+
+React-এ event handling করা হয় function দিয়ে।  
+যেমন : onClick, onChange ইত্যাদিতে function pass করা হয়, যেটা event ঘটলে run করে।
